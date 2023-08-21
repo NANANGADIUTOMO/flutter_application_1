@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class ProductPage extends StatefulWidget {
   const ProductPage({super.key});
@@ -22,12 +21,60 @@ class _ProductPageState extends State<ProductPage> {
             fontWeight: FontWeight.bold),
             ),
       ),
-      body: const Stack(
+      body: Stack(
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text("data1"),
-              Text("data2")],)],),);
+            children: [ 
+              const SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 120,
+                  height: 150,
+                  decoration:  BoxDecoration(color: Colors.amber, borderRadius: BorderRadius.circular(10)),
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 15,),
+                      const Text("TSHRIT",style: TextStyle(fontWeight: FontWeight.bold)),
+                      const SizedBox(height: 10,),
+                      Image.asset("assets/Tshirt.png",
+                                    width: 60,
+                                    height: 60,), 
+                      const SizedBox(height: 10,),
+                      const Text("Rp 85.000", style: TextStyle(fontWeight: FontWeight.bold))],)),
+                  const SizedBox(width: 10,),
+                  Container(
+                  width: 120,
+                  height: 150,
+                  decoration: BoxDecoration(color: Colors.amber, borderRadius: BorderRadius.circular(10)),
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 15,),
+                      const Text("KEMEJA", style: TextStyle(fontWeight: FontWeight.bold)),
+                      const SizedBox(height: 10,),
+                      Image.asset("assets/kemeja.png",
+                                    width: 60,
+                                    height: 60,),
+                      const SizedBox(height: 10,), 
+                      const Text("Rp 85.000", style: TextStyle(fontWeight: FontWeight.bold))],)),
+                  const SizedBox(width: 10,),
+                  Container(
+                  width: 120,
+                  height: 150,
+                  decoration: BoxDecoration(color: Colors.amber, borderRadius: BorderRadius.circular(10)),
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 15,),
+                      const Text("HOODIE", style: TextStyle(fontWeight: FontWeight.bold)),
+                      const SizedBox(height: 10,),
+                      Image.asset("assets/hoodie.png",
+                                    width: 60,
+                                    height: 60,), 
+                      const SizedBox(height: 10,),
+                      const Text("cooming sun", style: TextStyle(fontWeight: FontWeight.bold),)],)),
+                  ],),
+                  ],)],),);
   }
 }
